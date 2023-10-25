@@ -14,7 +14,7 @@
     <name>SA4</name>
     <description>SA4</description>
     <properties>
-        <java.version>21</java.version>
+        <java.version>17</java.version>
     </properties>
     <dependencies>
         <dependency>
@@ -59,11 +59,16 @@
 
     <build>
         <plugins>
-            <plugin>
-                    <groupId>com.heroku.sdk</groupId>
-                    <artifactId>heroku-maven-plugin</artifactId>
-                    <version>2.0.8</version>
-            </plugin>
+           
+                 <plugin>  
+                          <groupId>org.apache.maven.plugins</groupId>
+                               <artifactId>maven-compiler-plugin</artifactId>
+                               <version>3.1</version>
+                               <configuration>
+                                   <source>1.7</source>
+                                   <target>1.7</target>
+                                        </configuration>
+                  </plugin>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
